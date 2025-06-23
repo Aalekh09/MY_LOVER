@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bring Us Together</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Lora&family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="game-page">
+
+<div class="container">
+    <h1>Bring Us Together</h1>
+    <p>Drag "AALEKH" to "CHIRKUT" to begin our journey.</p>
+    <div id="game-board">
+        <div id="person1" class="person" draggable="true">A</div>
+        <div id="person2" class="person" ondragover="event.preventDefault()">S</div>
+    </div>
+    <p id="successMessage" class="success-message"></p>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const person1 = document.getElementById('person1');
+    const person2 = document.getElementById('person2');
+    const successMessage = document.getElementById('successMessage');
+
+    person1.addEventListener('dragstart', (e) => {
+        e.dataTransfer.setData('text/plain', 'person1');
+        setTimeout(() => {
+            person1.style.visibility = 'hidden';
+        }, 0);
+    });
+
+    person1.addEventListener('dragend', (e) => {
+        person1.style.visibility = 'visible';
+    });
+
+    person2.addEventListener('dragenter', (e) => {
+        e.preventDefault();
+        person2.style.backgroundColor = '#ad1457';
+    });
+
+    person2.addEventListener('dragleave', (e) => {
+        person2.style.backgroundColor = '#c2185b';
+    });
+
+    person2.addEventListener('drop', (e) => {
+        e.preventDefault();
+        const data = e.dataTransfer.getData('text/plain');
+        if (data === 'person1') {
+            person2.style.backgroundColor = '#c2185b';
+            person1.style.display = 'none';
+            person2.innerHTML = '❤';
+            
+            successMessage.textContent = 'Together at last! Redirecting...';
+
+            setTimeout(() => {
+                window.location.href = 'home.html';
+            }, 1500);
+        }
+    });
+});
+</script>
+
+</body>
+</html> 
