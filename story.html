@@ -3,51 +3,223 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Story</title>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Lora&family=Dancing+Script&display=swap" rel="stylesheet">
+  <title>Our Beautiful Story</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Lora&family=Dancing+Script&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    .timeline {
-      text-align: left;
-      margin-top: 30px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .event {
-      margin-bottom: 30px;
-    }
-    .event h3 {
-      color: #c2185b;
-      font-family: 'Dancing Script', cursive;
-      font-size: 2em;
-    }
-  </style>
 </head>
-<body>
-<div class="container">
-  <h1>Our Journey Together</h1>
-  <div class="timeline">
-    <div class="event">
-      <h3>26 June 2024 – The Proposal</h3>
-      <p>On the riverside, with the mountains watching over us, I asked you to be mine—and you kissed me. That was the beginning of everything.</p>
+<body class="story-page">
+<div class="story-container">
+  <div class="story-header">
+    <h1>📖 Our Beautiful Story 📖</h1>
+    <p class="story-subtitle">The journey of our love, chapter by chapter</p>
+  </div>
+  
+  <div class="story-folder-wrapper">
+    <div class="story-folder-back"></div>
+    <div class="story-folder-front" id="storyFolderFront">
+      <div class="story-folder-tab"></div>
+      <div class="story-folder-label">
+        <span>📚 Our Love Story 📚</span>
+      </div>
+      <div class="story-folder-decoration">
+        <div class="story-heart-seal">💕</div>
+      </div>
+      <div class="story-open-instruction">
+        <p>Click to open our story book</p>
+        <div class="story-click-indicator">👆</div>
+      </div>
     </div>
-    <div class="event">
-      <h3>First Trip Together</h3>
-      <p>Our first trip gave us memories we'll never forget. The laughter, the food, the sunsets.</p>
-    </div>
-    <div class="event">
-      <h3>Random Moments</h3>
-      <p>Video calls, mid-day messages, late-night talks—these tiny things became the biggest joy of my days.</p>
-    </div>
-    <div class="event">
-      <h3>26 June 2025 – One Year Later</h3>
-      <p>Now here we are, one year stronger. Sitting in a restaurant, smiling, reminiscing, and looking forward to forever.</p>
+    
+    <div class="story-book" id="storyBook">
+      <div class="story-book-content">
+        <div class="story-book-header">
+          <h2>Our Journey Together</h2>
+          <div class="story-book-subtitle">A Love Story Written in Time</div>
+        </div>
+        
+        <div class="timeline">
+          <div class="timeline-line"></div>
+          
+          <div class="story-event" data-chapter="1">
+            <div class="event-marker">
+              <div class="event-icon">💕</div>
+            </div>
+            <div class="event-content">
+              <div class="event-date">26 June 2024</div>
+              <h3>The Proposal</h3>
+              <p>On the riverside, with the mountains watching over us, I asked you to be mine—and you kissed me. That was the beginning of everything beautiful in our lives.</p>
+              <div class="event-decoration">🏔️ 💋 🌊</div>
+            </div>
+          </div>
+          
+          <div class="story-event" data-chapter="2">
+            <div class="event-marker">
+              <div class="event-icon">✈️</div>
+            </div>
+            <div class="event-content">
+              <div class="event-date">Our First Adventure</div>
+              <h3>First Trip Together</h3>
+              <p>Our first trip gave us memories we'll never forget. The laughter echoing through new places, sharing food and discovering each other's quirks, watching sunsets paint the sky while we painted our future.</p>
+              <div class="event-decoration">🌅 🍽️ 😂</div>
+            </div>
+          </div>
+          
+          <div class="story-event" data-chapter="3">
+            <div class="event-marker">
+              <div class="event-icon">📱</div>
+            </div>
+            <div class="event-content">
+              <div class="event-date">Every Single Day</div>
+              <h3>Random Moments</h3>
+              <p>Video calls that lasted hours, mid-day messages that made us smile, late-night talks about everything and nothing—these tiny things became the biggest joy of my days. Distance meant nothing when hearts were so close.</p>
+              <div class="event-decoration">💬 🌙 ❤️</div>
+            </div>
+          </div>
+          
+          <div class="story-event" data-chapter="4">
+            <div class="event-marker">
+              <div class="event-icon">🎉</div>
+            </div>
+            <div class="event-content">
+              <div class="event-date">26 June 2025</div>
+              <h3>One Year Later</h3>
+              <p>Now here we are, one year stronger, one year deeper in love. Sitting together, smiling, reminiscing about how far we've come, and looking forward to forever. This is just the beginning of our eternal story.</p>
+              <div class="event-decoration">🥂 💖 ♾️</div>
+            </div>
+          </div>
+          
+          <div class="story-event" data-chapter="5">
+            <div class="event-marker">
+              <div class="event-icon">🌟</div>
+            </div>
+            <div class="event-content">
+              <div class="event-date">Forever & Always</div>
+              <h3>Our Future Chapters</h3>
+              <p>Every day with you is a new page in our story. Every moment we share adds another beautiful chapter. Our love story is still being written, and I can't wait to see what adventures await us in the pages yet to come.</p>
+              <div class="event-decoration">📝 💫 🔮</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="story-epilogue">
+          <h3>To Be Continued...</h3>
+          <p>Our story doesn't end here. It grows more beautiful with each passing day, each shared smile, each whispered "I love you." Here's to writing many more chapters together, my love.</p>
+          <div class="story-signature">
+            <div class="story-hearts">💕 💖 💕</div>
+            <div class="story-author">Written with love by Aalekh</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="story-close-btn" id="storyCloseBtn">
+        <span>✕</span>
+      </div>
     </div>
   </div>
-  <nav>
-    <a href="home.html">Home</a>
-  </nav>
+  
+  <div class="story-navigation">
+    <a href="home.html" class="nav-btn">
+      <span class="btn-icon">🏠</span>
+      Back to Home
+    </a>
+  </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const storyFolderFront = document.getElementById('storyFolderFront');
+  const storyBook = document.getElementById('storyBook');
+  const storyCloseBtn = document.getElementById('storyCloseBtn');
+  const storyEvents = document.querySelectorAll('.story-event');
+  
+  // Open story book animation
+  storyFolderFront.addEventListener('click', () => {
+    storyFolderFront.classList.add('opening');
+    
+    setTimeout(() => {
+      storyBook.classList.add('visible');
+      document.body.style.overflow = 'hidden';
+      
+      // Animate story events one by one
+      storyEvents.forEach((event, index) => {
+        setTimeout(() => {
+          event.classList.add('animate-in');
+        }, index * 300);
+      });
+    }, 800);
+  });
+  
+  // Close story book
+  storyCloseBtn.addEventListener('click', () => {
+    storyBook.classList.remove('visible');
+    document.body.style.overflow = 'auto';
+    
+    // Reset animations
+    storyEvents.forEach(event => {
+      event.classList.remove('animate-in');
+    });
+    
+    setTimeout(() => {
+      storyFolderFront.classList.remove('opening');
+    }, 500);
+  });
+  
+  // Close on outside click
+  storyBook.addEventListener('click', (e) => {
+    if (e.target === storyBook) {
+      storyCloseBtn.click();
+    }
+  });
+  
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && storyBook.classList.contains('visible')) {
+      storyCloseBtn.click();
+    }
+  });
+  
+  // Add interactive effects to story events
+  storyEvents.forEach(event => {
+    event.addEventListener('mouseenter', () => {
+      event.classList.add('hover-effect');
+      createStorySparkles(event);
+    });
+    
+    event.addEventListener('mouseleave', () => {
+      event.classList.remove('hover-effect');
+    });
+  });
+  
+  function createStorySparkles(element) {
+    for (let i = 0; i < 3; i++) {
+      setTimeout(() => {
+        const sparkle = document.createElement('div');
+        sparkle.className = 'story-sparkle';
+        sparkle.innerHTML = '✨';
+        sparkle.style.left = Math.random() * 100 + '%';
+        sparkle.style.top = Math.random() * 100 + '%';
+        element.appendChild(sparkle);
+        
+        setTimeout(() => sparkle.remove(), 1500);
+      }, i * 200);
+    }
+  }
+  
+  // Add floating hearts animation
+  function createFloatingStoryHeart() {
+    const heart = document.createElement('div');
+    heart.className = 'floating-story-heart';
+    heart.innerHTML = '💖';
+    heart.style.left = Math.random() * 100 + '%';
+    heart.style.animationDelay = Math.random() * 2 + 's';
+    document.body.appendChild(heart);
+    
+    setTimeout(() => heart.remove(), 6000);
+  }
+  
+  // Create hearts periodically
+  setInterval(createFloatingStoryHeart, 4000);
+});
+</script>
 </body>
 </html>

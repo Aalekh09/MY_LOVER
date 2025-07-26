@@ -4,24 +4,108 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>One Year of Us ❤</title>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Lora&family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Lora&family=Dancing+Script&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<div class="container">
-  <h1>26 June 2024 → 26 June 2025</h1>
-  <h2>Happy Anniversary, My Love ❤</h2>
-  <p>One beautiful year of laughter, love, and memories.</p>
-  <p class="note">Kya tumhe yaad hai woh pehli baar jab tumne haath pakda tha mera? Mujhe laga, zindagi bhar ka sukoon mil gaya.</p>
-  <p class="note">Kabhi socha nahi tha ki pyaar is tarah se zindagi ka hissa banega, jaise sanson mein bas gaya ho tu. Tere bina sab kuch adhoora lagta hai, aur tere saath sab kuch poora.</p>
-  <nav>
-    <a href="story.html">Our Story</a>
-    <a href="letter.html">My Letter to You</a>
-    <a href="promises.html">Our Dreams</a>
-    <a href="gallery.html">Gallery</a>
-  </nav>
-  <a class="download-btn" href="AnniversaryWebsite.zip" download>📦 Download This Website</a>
-  <footer>Made with ❤ by your Husband</footer>
+<body class="home-page">
+<div class="home-container">
+  <div class="hero-section">
+    <div class="floating-hearts">
+      <span class="heart">💖</span>
+      <span class="heart">💕</span>
+      <span class="heart">💗</span>
+      <span class="heart">💝</span>
+      <span class="heart">💘</span>
+    </div>
+    
+    <h1 class="anniversary-title">26 June 2024 → 26 June 2025</h1>
+    <h2 class="main-heading">Happy Anniversary, My Love ❤</h2>
+    <p class="subtitle">One beautiful year of laughter, love, and memories.</p>
+    
+    <div class="love-quotes">
+      <div class="quote-card">
+        <p class="quote-text">Kya tumhe yaad hai woh pehli baar jab tumne haath pakda tha mera? Mujhe laga, zindagi bhar ka sukoon mil gaya.</p>
+      </div>
+      <div class="quote-card">
+        <p class="quote-text">Kabhi socha nahi tha ki pyaar is tarah se zindagi ka hissa banega, jaise sanson mein bas gaya ho tu. Tere bina sab kuch adhoora lagta hai, aur tere saath sab kuch poora.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="navigation-section">
+    <h3>Explore Our Journey</h3>
+    <div class="nav-grid">
+      <a href="story.html" class="nav-card">
+        <div class="nav-icon">📖</div>
+        <h4>Our Story</h4>
+        <p>The beautiful beginning of us</p>
+      </a>
+      <a href="letter.html" class="nav-card">
+        <div class="nav-icon">💌</div>
+        <h4>My Letter to You</h4>
+        <p>Words from my heart</p>
+      </a>
+      <a href="promises.html" class="nav-card">
+        <div class="nav-icon">🌟</div>
+        <h4>Our Dreams</h4>
+        <p>Promises for our future</p>
+      </a>
+      <a href="gallery.html" class="nav-card">
+        <div class="nav-icon">📸</div>
+        <h4>Gallery</h4>
+        <p>Our precious moments</p>
+      </a>
+    </div>
+  </div>
+  
+  <div class="footer-section">
+    <a class="download-btn" href="AnniversaryWebsite.zip" download>
+      <span class="btn-icon">📦</span>
+      Download This Website
+    </a>
+    <footer class="footer-text">Made with ❤ by your Husband</footer>
+  </div>
 </div>
+
+<script>
+// Add some interactive animations
+document.addEventListener('DOMContentLoaded', () => {
+  // Animate floating hearts
+  const hearts = document.querySelectorAll('.floating-hearts .heart');
+  hearts.forEach((heart, index) => {
+    heart.style.animationDelay = `${index * 0.5}s`;
+  });
+  
+  // Add hover effects to nav cards
+  const navCards = document.querySelectorAll('.nav-card');
+  navCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      card.style.transform = 'translateY(-10px) scale(1.02)';
+    });
+    
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'translateY(0) scale(1)';
+    });
+  });
+  
+  // Add scroll animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-in');
+      }
+    });
+  }, observerOptions);
+  
+  document.querySelectorAll('.quote-card, .nav-card').forEach(el => {
+    observer.observe(el);
+  });
+});
+</script>
 </body>
 </html>

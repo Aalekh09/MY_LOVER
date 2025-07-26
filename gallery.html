@@ -3,66 +3,467 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery</title>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Lora&family=Dancing+Script&display=swap" rel="stylesheet">
+  <title>Our Beautiful Moments</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Lora&family=Dancing+Script&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      background-color: #fff0f0;
-      font-family: 'Roboto', sans-serif;
-      padding: 30px;
-      text-align: center;
-    }
-    h1 {
-      color: #e91e63;
-      font-family: 'Pacifico', cursive;
-    }
-    .photos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-    .photos img {
-      width: 100%;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .photos img:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-    }
-  </style>
 </head>
-<body>
-<div class="container">
-  <h1>Our Moments 📸</h1>
-  <div class="photos">
-    <!-- Add your images here -->
-    <img src="uploads/IMG-20250623-WA0372.jpg" alt="Moment 1" />
-    <img src="uploads/IMG-20250623-WA0373.jpg" alt="Moment 2" />
-    <img src="uploads/IMG-20250623-WA0374.jpg" alt="Moment 3" />
-    <img src="uploads/IMG-20250623-WA0375.jpg" alt="Moment 4" />
-    <img src="uploads/IMG-20250623-WA0376.jpg" alt="Moment 5" />
-    <img src="uploads/IMG-20250623-WA0377.jpg" alt="Moment 6" />
-    <img src="uploads/IMG-20250623-WA0378.jpg" alt="Moment 7" />
-    <img src="uploads/IMG-20250623-WA0379.jpg" alt="Moment 8" />
-    <img src="uploads/IMG-20250623-WA0380.jpg" alt="Moment 9" />
-    <img src="uploads/IMG-20250623-WA0381.jpg" alt="Moment 10" />
-    <img src="uploads/IMG-20250623-WA0382.jpg" alt="Moment 11" />
-    <img src="uploads/IMG-20250623-WA0383.jpg" alt="Moment 12" />
-    <img src="uploads/IMG-20250623-WA0384.jpg" alt="Moment 13" />
-    <img src="uploads/IMG-20250623-WA0385.jpg" alt="Moment 14" />
-    <img src="uploads/IMG-20250623-WA0386.jpg" alt="Moment 15" />
-    <img src="uploads/IMG-20250623-WA0387.jpg" alt="Moment 16" />
-    <img src="uploads/IMG-20250623-WA0388.jpg" alt="Moment 17" />
-    <img src="uploads/IMG-20250623-WA0389.jpg" alt="Moment 18" />
-    <img src="uploads/IMG-20250623-WA0390.jpg" alt="Moment 19" />
+<body class="gallery-page">
+<div class="gallery-container">
+  <div class="gallery-header">
+    <h1>Our Beautiful Moments 📸</h1>
+    <p class="gallery-subtitle">Every picture tells our love story</p>
   </div>
-  <nav>
-    <a href="home.html">Home</a>
-  </nav>
+  
+  <div class="gallery-filters">
+    <button class="filter-btn active" data-filter="all">All Photos</button>
+    <button class="filter-btn" data-filter="memories">Sweet Memories</button>
+    <button class="filter-btn" data-filter="special">Special Moments</button>
+  </div>
+  
+  <div class="photos-grid" id="photosGrid">
+    <div class="photo-item" data-category="memories">
+      <img src="uploads/IMG-20250623-WA0372.jpg" alt="Beautiful Moment 1" loading="lazy" />
+      <div class="photo-overlay">
+        <div class="photo-info">
+          <h3>Sweet Memory</h3>
+          <p>A moment to cherish forever</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="photo-item" data-category="special">
+      <img src="uploads/IMG-20250623-WA0373.jpg" alt="Beautiful Moment 2" loading="lazy" />
+      <div class="photo-overlay">
+        <div class="photo-info">
+          <h3>Special Day</h3>
+          <p>Love captured in time</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="photo-item" data-category="memories">
+      <img src="uploads/IMG-20250623-WA0374.jpg" alt="Beautiful Moment 3" loading="lazy" />
+      <div class="photo-overlay">
+        <div class="photo-info">
+          <h3>Together</h3>
+          <p>Our happiness shines through</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="photo-item" data-category="special">
+      <img src="uploads/IMG-20250623-WA0375.jpg" alt="Beautiful Moment 4" loading="lazy" />
+      <div class="photo-overlay">
+        <div class="photo-info">
+          <h3>Precious Moment</h3>
+          <p>Love in every glance</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="photo-item" data-category="memories">
+      <img src="uploads/IMG-20250623-WA0376.jpg" alt="Beautiful Moment 5" loading="lazy" />
+      <div class="photo-overlay">
+        <div class="photo-info">
+          <h3>Beautiful Day</h3>
+          <p>Smiles that light up our world</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="photo-item" data-category="special">
+      <img src="uploads/IMG-20250623-WA0377.jpg" alt="Beautiful Moment 6" loading="lazy" />
+      <div class="photo-overlay">
+        <div class="photo-info">
+          <h3>Adventure</h3>
+          <p>Exploring life together</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="photo-item" data-category="memories">
+      <img src="uploads/IMG-20250623-WA0378.jpg" alt="Beautiful Moment 7" loading="lazy" />
+      <div class="photo-overlay">
+        <div class="photo-info">
+          <h3>Joyful Times</h3>
+          <p>Laughter fills our hearts</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="photo-item" data-category="special">
+      <img src="uploads/IMG-20250623-WA0379.jpg" alt="Beautiful Moment 8" loading="lazy" />
+      <div class="photo-overlay">
+        <div class="photo-info">
+          <h3>Romantic Evening</h3>
+          <p>Love under the stars</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="photo-item" data-category="memories">
+      <img src="uploads/IMG-20250623-WA0380.jpg" alt="Beautiful Moment 9" loading="lazy" />
+      <div class="photo-overlay">
+        <div class="photo-info">
+          <h3>Happy Moments</h3>
+          <p>Pure joy captured</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="photo-item" data-category="special">
+      <img src="uploads/IMG-20250623-WA0381.jpg" alt="Beautiful Moment 10" loading="lazy" />
+      <div class="photo-overlay">
+        <div class="photo-info">
+          <h3>Celebration</h3>
+          <p>Celebrating our love</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="photo-item" data-category="memories">
+      <img src="uploads/IMG-20250623-WA0382.jpg" alt="Beautiful Moment 11" loading="lazy" />
+      <div class="photo-overlay">
+        <div class="photo-info">
+          <h3>Tender Moment</h3>
+          <p>Gentle love shared</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="photo-item" data-category="special">
+      <img src="uploads/IMG-20250623-WA0383.jpg" alt="Beautiful Moment 12" loading="lazy" />
+      <div class="photo-overlay">
+        <div class="photo-info">
+          <h3>Perfect Day</h3>
+          <p>Everything feels right</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="photo-item" data-category="memories">
+      <img src="uploads/IMG-20250623-WA0384.jpg" alt="Beautiful Moment 13" loading="lazy" />
+      <div class="photo-overlay">
+        <div class="photo-info">
+          <h3>Sweet Embrace</h3>
+          <p>Warmth in your arms</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="photo-item" data-category="special">
+      <img src="uploads/IMG-20250623-WA0385.jpg" alt="Beautiful Moment 14" loading="lazy" />
+      <div class="photo-overlay">
+        <div class="photo-info">
+          <h3>Magical Time</h3>
+          <p>Creating magic together</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="photo-item" data-category="memories">
+      <img src="uploads/IMG-20250623-WA0386.jpg" alt="Beautiful Moment 15" loading="lazy" />
+      <div class="photo-overlay">
+        <div class="photo-info">
+          <h3>Blissful Day</h3>
+          <p>Pure happiness</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="photo-item" data-category="special">
+      <img src="uploads/IMG-20250623-WA0387.jpg" alt="Beautiful Moment 16" loading="lazy" />
+      <div class="photo-overlay">
+        <div class="photo-info">
+          <h3>Dreamy Moment</h3>
+          <p>Living our dreams</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="photo-item" data-category="memories">
+      <img src="uploads/IMG-20250623-WA0388.jpg" alt="Beautiful Moment 17" loading="lazy" />
+      <div class="photo-overlay">
+        <div class="photo-info">
+          <h3>Peaceful Time</h3>
+          <p>Serenity in love</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="photo-item" data-category="special">
+      <img src="uploads/IMG-20250623-WA0389.jpg" alt="Beautiful Moment 18" loading="lazy" />
+      <div class="photo-overlay">
+        <div class="photo-info">
+          <h3>Wonderful Day</h3>
+          <p>Wonder in every moment</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="photo-item" data-category="memories">
+      <img src="uploads/IMG-20250623-WA0390.jpg" alt="Beautiful Moment 19" loading="lazy" />
+      <div class="photo-overlay">
+        <div class="photo-info">
+          <h3>Eternal Love</h3>
+          <p>Forever and always</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- New Photos Added -->
+    <div class="photo-item" data-category="special">
+      <img src="uploads/IMG-20250625-WA0017.jpg" alt="Beautiful Moment 20" loading="lazy" />
+      <div class="photo-overlay">
+        <div class="photo-info">
+          <h3>Special Celebration</h3>
+          <p>Celebrating our love story</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="photo-item" data-category="memories">
+      <img src="uploads/IMG-20250628-WA0013.jpg" alt="Beautiful Moment 21" loading="lazy" />
+      <div class="photo-overlay">
+        <div class="photo-info">
+          <h3>Sweet Memories</h3>
+          <p>Creating beautiful memories</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="photo-item" data-category="special">
+      <img src="uploads/IMG-20250628-WA0016.jpg" alt="Beautiful Moment 22" loading="lazy" />
+      <div class="photo-overlay">
+        <div class="photo-info">
+          <h3>Perfect Moment</h3>
+          <p>Everything feels perfect with you</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="photo-item" data-category="memories">
+      <img src="uploads/IMG-20250628-WA0018.jpg" alt="Beautiful Moment 23" loading="lazy" />
+      <div class="photo-overlay">
+        <div class="photo-info">
+          <h3>Joyful Day</h3>
+          <p>Joy radiates from our hearts</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="photo-item" data-category="special">
+      <img src="uploads/IMG-20250628-WA0019.jpg" alt="Beautiful Moment 24" loading="lazy" />
+      <div class="photo-overlay">
+        <div class="photo-info">
+          <h3>Loving Embrace</h3>
+          <p>Safe in each other's arms</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="photo-item" data-category="memories">
+      <img src="uploads/IMG-20250628-WA0020.jpg" alt="Beautiful Moment 25" loading="lazy" />
+      <div class="photo-overlay">
+        <div class="photo-info">
+          <h3>Beautiful Together</h3>
+          <p>Two hearts beating as one</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="photo-item" data-category="special">
+      <img src="uploads/IMG-20250628-WA0026.jpg" alt="Beautiful Moment 26" loading="lazy" />
+      <div class="photo-overlay">
+        <div class="photo-info">
+          <h3>Precious Time</h3>
+          <p>Every moment is precious with you</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="photo-item" data-category="memories">
+      <img src="uploads/IMG-20250726-WA0002.jpg" alt="Beautiful Moment 27" loading="lazy" />
+      <div class="photo-overlay">
+        <div class="photo-info">
+          <h3>Recent Memories</h3>
+          <p>Fresh moments of love</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="photo-item" data-category="special">
+      <img src="uploads/IMG-20250726-WA0003.jpg" alt="Beautiful Moment 28" loading="lazy" />
+      <div class="photo-overlay">
+        <div class="photo-info">
+          <h3>New Adventures</h3>
+          <p>Starting new adventures together</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="photo-item" data-category="memories">
+      <img src="uploads/IMG-20250726-WA0004.jpg" alt="Beautiful Moment 29" loading="lazy" />
+      <div class="photo-overlay">
+        <div class="photo-info">
+          <h3>Happy Times</h3>
+          <p>Happiness multiplied when shared</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="photo-item" data-category="special">
+      <img src="uploads/IMG-20250726-WA0005.jpg" alt="Beautiful Moment 30" loading="lazy" />
+      <div class="photo-overlay">
+        <div class="photo-info">
+          <h3>Latest Memories</h3>
+          <p>Our love story continues</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="gallery-navigation">
+    <a href="home.html" class="nav-btn">
+      <span class="btn-icon">🏠</span>
+      Back to Home
+    </a>
+  </div>
 </div>
+
+<!-- Lightbox Modal -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-content">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <img id="lightboxImg" src="" alt="">
+    <div class="lightbox-info">
+      <h3 id="lightboxTitle"></h3>
+      <p id="lightboxDesc"></p>
+    </div>
+    <div class="lightbox-nav">
+      <button id="prevBtn">❮</button>
+      <button id="nextBtn">❯</button>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Filter functionality
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const photoItems = document.querySelectorAll('.photo-item');
+  
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Remove active class from all buttons
+      filterBtns.forEach(b => b.classList.remove('active'));
+      // Add active class to clicked button
+      btn.classList.add('active');
+      
+      const filter = btn.dataset.filter;
+      
+      photoItems.forEach(item => {
+        if (filter === 'all' || item.dataset.category === filter) {
+          item.style.display = 'block';
+          setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'scale(1)';
+          }, 100);
+        } else {
+          item.style.opacity = '0';
+          item.style.transform = 'scale(0.8)';
+          setTimeout(() => {
+            item.style.display = 'none';
+          }, 300);
+        }
+      });
+    });
+  });
+  
+  // Lightbox functionality
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxTitle = document.getElementById('lightboxTitle');
+  const lightboxDesc = document.getElementById('lightboxDesc');
+  const closeBtn = document.getElementById('closeBtn');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  
+  let currentImageIndex = 0;
+  const images = Array.from(photoItems);
+  
+  // Open lightbox
+  photoItems.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      currentImageIndex = index;
+      showImage(index);
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+  
+  // Close lightbox
+  closeBtn.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      closeLightbox();
+    }
+  });
+  
+  // Navigation
+  prevBtn.addEventListener('click', () => {
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+    showImage(currentImageIndex);
+  });
+  
+  nextBtn.addEventListener('click', () => {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    showImage(currentImageIndex);
+  });
+  
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (lightbox.classList.contains('active')) {
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') prevBtn.click();
+      if (e.key === 'ArrowRight') nextBtn.click();
+    }
+  });
+  
+  function showImage(index) {
+    const item = images[index];
+    const img = item.querySelector('img');
+    const info = item.querySelector('.photo-info');
+    
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightboxTitle.textContent = info.querySelector('h3').textContent;
+    lightboxDesc.textContent = info.querySelector('p').textContent;
+  }
+  
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+  
+  // Lazy loading animation
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-in');
+      }
+    });
+  }, observerOptions);
+  
+  photoItems.forEach(item => {
+    observer.observe(item);
+  });
+});
+</script>
 </body>
 </html>
