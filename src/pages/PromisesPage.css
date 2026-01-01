@@ -1,0 +1,193 @@
+.dreams-page {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.dreams-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.dreams-header {
+  text-align: center;
+  padding: 60px 0;
+  position: relative;
+}
+
+.floating-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.dreams-header h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 3.5em;
+  color: white;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: heartBeat 4s infinite;
+}
+
+.dreams-subtitle {
+  font-size: 1.3em;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+.dreams-content {
+  padding: 40px 0;
+}
+
+.dreams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.dream-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.dream-card:hover {
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+.dream-icon {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.dream-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #667eea;
+  margin-bottom: 15px;
+}
+
+.dream-card p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+  font-weight: 300;
+  margin: 0;
+}
+
+.dream-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 20px;
+}
+
+.dream-card:hover .dream-glow {
+  opacity: 1;
+}
+
+.dreams-footer {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.promise-section {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 25px;
+  margin-bottom: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.promise-section h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5em;
+  color: #667eea;
+  margin-bottom: 25px;
+}
+
+.promise-text p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.4em;
+  color: #2c3e50;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.signature {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.2em;
+  color: #e91e63;
+  text-align: right;
+}
+
+.navigation {
+  margin-top: 30px;
+}
+
+.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #667eea;
+  padding: 15px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-btn:hover {
+  background: white;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .dreams-header h1 {
+    font-size: 2.5em;
+  }
+
+  .dreams-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .dream-card {
+    padding: 25px;
+  }
+
+  .promise-section {
+    padding: 30px;
+  }
+}
+

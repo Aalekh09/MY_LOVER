@@ -1,0 +1,233 @@
+.game-page {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.game-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 90%;
+  backdrop-filter: blur(10px);
+}
+
+.game-header h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 3em;
+  color: #e91e63;
+  margin-bottom: 10px;
+  animation: heartBeat 2s infinite;
+}
+
+.game-subtitle {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.puzzle-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.word-section {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.word-section h3 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2em;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.heart-puzzle {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 20px;
+  background: linear-gradient(45deg, #ffeef0, #fff0f5);
+  border-radius: 15px;
+  border: 2px dashed #ff69b4;
+  min-height: 100px;
+}
+
+.heart-piece {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #ff6b9d, #c44569);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Pacifico', cursive;
+  font-size: 2em;
+  color: white;
+  cursor: grab;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  animation: float 3s ease-in-out infinite;
+  user-select: none;
+}
+
+.heart-piece:active {
+  cursor: grabbing;
+}
+
+.heart-piece:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.drop-zones {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.drop-zone {
+  width: 100px;
+  height: 100px;
+  border: 3px dashed #ff69b4;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  color: #ff69b4;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.drop-zone.filled {
+  border-color: #4ecdc4;
+  background: rgba(78, 205, 196, 0.1);
+}
+
+.correct-letter {
+  font-family: 'Pacifico', cursive;
+  font-size: 2em;
+  color: #4ecdc4;
+  font-weight: bold;
+}
+
+.drop-zone.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+.game-instructions {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.game-instructions p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff6b9d, #4ecdc4);
+  border-radius: 5px;
+}
+
+.progress-text {
+  font-weight: 600;
+  color: #e91e63;
+}
+
+.success-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.heart-explosion {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.heart-explosion .heart {
+  font-size: 3em;
+}
+
+.success-animation h2 {
+  color: white;
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  font-family: 'Pacifico', cursive;
+}
+
+.success-animation p {
+  color: white;
+  font-size: 1.2em;
+}
+
+.sparkle {
+  position: absolute;
+  font-size: 1.5em;
+  animation: sparkle 1s ease-out;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .game-container {
+    padding: 25px;
+  }
+
+  .game-header h1 {
+    font-size: 2.2em;
+  }
+
+  .heart-piece {
+    width: 60px;
+    height: 60px;
+    font-size: 1.3em;
+  }
+
+  .drop-zone {
+    width: 80px;
+    height: 80px;
+    font-size: 1.2em;
+  }
+}
+
